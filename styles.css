@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maroon-color: #8E4944;
+    --mustard-color: #D97230;
+    --yellow-color: #F9C24E;
+    --green-color: #62B762;
+    --purple-color: #5E59A5;
+}
+
+.background-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden; /* Ensure the video doesn't overflow */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    opacity: 0.6; /* Lower opacity for watermark effect */
+    z-index: -1; /* Send the video behind the periodic table */
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 88vh;
+}
+
+.first-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: transform .3s;
+}
+
+.second-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 70px;
+    margin-left: -11px;
+    transition: transform .3s;
+}
+
+.third-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 208px;
+    margin-left: -11px;
+    transition: transform .3s;
+}
+
+.fourth-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 208px;
+    margin-left: 15px;
+    transition: transform .3s;
+}
+
+.fifth-col, 
+.sixth-col, 
+.seventh-col, 
+.eighth-col, 
+.ninth-col, 
+.tenth-col , 
+.eleventh-col, 
+.twelfth-col 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 208px;
+    margin-left: -11px;
+    transition: transform .3s;
+}
+
+.thirteenth-col,
+.fourteenth-col,
+.fifteenth-col,
+.sixteenth-col,
+.seventeenth-col
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 70px;
+    margin-left: -11px;
+    transition: transform .3s;
+}
+
+.eighteenth-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: -11px;
+    transition: transform .3s;
+}
+
+.row-1, .row-2 {
+    display: flex;
+    margin-left: 12vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.row-2 {
+    margin-top: -10px;
+}
+
+.element {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background-color: var(--maroon-color);
+    border-radius: 0.4rem;
+    border: none;
+    z-index: 1; /* Default stacking order */
+    transition: transform 0.2s, z-index 0s; /* Ensures z-index changes without delay */
+}
+
+.element:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform 0.2s, z-index 0s; /* Ensures z-index changes without delay */
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.4);
+    z-index: 10; /* Bring the element to the front on hover */
+}
+
+.element:not(:hover) {
+    transition: transform 0.2s;
+}
+
+
+.atomic-number, .symbol, .element-name {
+    color: #fff;
+    font-family: 700;
+} 
+
+.atomic-number {
+    position: absolute;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+
+.mass {
+    position: absolute;
+    color: white;
+    font-size: 0.6rem;
+    right: 0px;
+    padding: 5px;
+    border-radius: 0.4em;
+    font-weight: 500;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 2rem;
+    top: 12px;
+    left: 15px;
+}
+
+.name {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    width: 65px;
+    bottom: 0px;
+    height: auto;
+    /* background: ; */
+    padding: 2px;
+    border-radius: 0.4em;
+}
