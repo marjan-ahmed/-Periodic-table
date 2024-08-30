@@ -170,30 +170,36 @@
 
 .mass {
     position: absolute;
+    display: none;
     color: white;
-    font-size: 0.6rem;
     right: 0px;
     padding: 5px;
     border-radius: 0.4em;
     font-weight: 500;
+    font-family: poppins;
+    font-size: 0.6rem;
+}
+
+.element:hover .mass {
+    display: block;
 }
 
 .symbol {
     position: absolute;
     font-size: 2rem;
-    top: 12px;
-    left: 15px;
+    top: 9px;
+    left: 14px;
 }
 
 .name {
     position: absolute;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
+    font-family: alata;
     text-align: center;
     width: 65px;
     bottom: 0px;
     height: auto;
-    /* background: ; */
+    background: rgb(58, 58, 58);
     padding: 2px;
-    border-radius: 0.4em;
 }
